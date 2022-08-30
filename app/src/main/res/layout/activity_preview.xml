@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.android.articles.PreviewActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PreviewActivity">
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textSize="24sp"
+            tools:text="@string/app_name"
+            android:id="@+id/title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{viewModel.article.title}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            tools:text="@string/app_name"
+            android:id="@+id/description"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{viewModel.article.abstract}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            tools:text="@string/app_name"
+            android:gravity="end"
+            android:id="@+id/Updated"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{`updated on `+viewModel.article.updated}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@{viewModel.article.byline}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Updated"
+            tools:text="@string/app_name" />
+
+        <Button
+            android:onClick="@{viewModel::openArticle}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="open"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/byLine"
+            app:layout_constraintVertical_bias="0.93" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
