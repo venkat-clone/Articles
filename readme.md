@@ -29,4 +29,7 @@ open ``gradle.properties`` file and add your api-key as
 API_KEY = "YOUR API KEY"
 ```
 
-build the project and run that on an emulator or android phone.
+build the project and open `java/com/android/articles/ArticleParcelableTest.kt` to run the test on `ArticleParcelable`.
+
+open `java/com/android/articles/retrofit/ArticleAPITest.kt` to run the test on `ArticleAPI`.
+
