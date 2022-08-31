@@ -1,8 +1,9 @@
 # Article
 
 New York Times API Implementation project in android.
+### preview
 
-
+[! preview of the app  ](https://user-images.githubusercontent.com/51732590/187590827-1a4ac66a-95e9-4a10-8804-0d01e5424fd5.mp4)
 
 ## Keywords
 
@@ -10,7 +11,7 @@ New York Times API Implementation project in android.
 * Retrofit
 * DataBinding / ViewBinding
 * API Implementation
-
+* Day/Nigth themes
 
 ## Project Setup
 
